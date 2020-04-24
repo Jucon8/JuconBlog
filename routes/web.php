@@ -30,3 +30,7 @@ Route::get('post/{id}', 'PostsController@post')->name('post');
 Route::resource('noticia', 'NoticiasController');
 
 Route::get('noticia/{id}', 'NoticiasController@show')->name('noticia');
+
+Route::get('admin', function(){
+    return view('admin.admin');
+});

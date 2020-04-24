@@ -1,6 +1,6 @@
 
 
-@extends('layouts.layout')
+@extends('layout')
 @section('titulo')
     Sobre Nosotros
 @endsection
