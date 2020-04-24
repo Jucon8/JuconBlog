@@ -167,6 +167,22 @@ img::-moz-selection {
     transform: translate3d(0, 100%, 0);
   }
 }
+#mainNav .navbar-toggler {
+    padding: 8px;
+  }
+
+.navbar-brand{
+    margin-right: .5rem;
+}
+/* auth nav */
+.navbar-expand 
+.navbar-nav
+.nav-link {
+    padding-right: 0rem;
+    padding-left: 0rem;
+    padding: .1rem;
+}
+
 
 header.masthead {
   margin-bottom: 25px;
@@ -266,6 +282,15 @@ header.masthead .post-heading .meta a {
   header.masthead .post-heading .subheading {
     font-size: 30px;
   }
+}
+
+header.masthead .login {
+  padding: 25vh 0 25vh;
+  color: black;
+}
+
+.login .card{
+  background-color: #ffffffad;
 }
 
 .post-preview > a {

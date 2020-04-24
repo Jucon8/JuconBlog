@@ -19,11 +19,11 @@ $posteos=App\Posteo::latest('added_on')->get();
     return view('welcome', compact('posteos'));
 });
 
- Route::get('/about', 'HomeController@about')->name('about');
+ Route::get('/about', 'IndexController@about')->name('about');
 
- Route::get('/posteo', 'HomeController@posteo')->name('posteo');
+ Route::get('/posteo', 'IndexController@posteo')->name('posteo');
 
-Route::get('/contacto', 'HomeController@contacto')->name('contacto');
+Route::get('/contacto', 'IndexController@contacto')->name('contacto');
 
 Route::get('post/{id}', 'PostsController@post')->name('post');
 
@@ -34,3 +34,6 @@ Route::get('noticia/{id}', 'NoticiasController@show')->name('noticia');
 Route::get('admin', function(){
     return view('admin.admin');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
