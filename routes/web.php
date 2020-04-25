@@ -31,9 +31,8 @@ Route::resource('noticia', 'NoticiasController');
 
 Route::get('noticia/{id}', 'NoticiasController@show')->name('noticia');
 
-Route::get('admin', function(){
-    return view('admin.admin');
-});
+Route::get('admin', 'AdminController@index')->name('admin');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
