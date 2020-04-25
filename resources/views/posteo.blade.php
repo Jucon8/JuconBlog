@@ -1,6 +1,6 @@
 @extends('layout')
 @section('titulo')
-Sobre Nosotros
+Post de Ejemplo
 @endsection
 @section('contenido')
   <!-- Page Header -->
