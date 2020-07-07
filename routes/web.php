@@ -13,11 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-$posteos=App\Posteo::latest('added_on')->get();
-
-    return view('welcome', compact('posteos'));
-});
+Route::get('/', 'IndexController@index')->name('index');
 
  Route::get('/about', 'IndexController@about')->name('about');
 
