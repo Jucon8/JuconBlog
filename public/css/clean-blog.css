@@ -296,6 +296,16 @@ header.masthead .login {
 .post-preview > a {
   color: #212529;
 }
+.post-image{
+  padding-right: 5%;
+  padding-left: 5%;
+}
+#textoNoticia{
+  /* height: 30vh;
+  overflow: hidden; */
+  padding-left: 5%;
+   padding-right: 5%;
+}
 
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;
