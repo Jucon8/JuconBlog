@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Posteo;
 use Illuminate\Http\Request;
-
+use Http;
 class NoticiasController extends Controller
 {
     /**
@@ -46,8 +46,22 @@ class NoticiasController extends Controller
      */
     public function show($id)
     {
-        $posteo = Posteo::where('id', $id)->first();
-      return view('noticia', compact('posteo'));
+
+                // API
+        $respuesta= Http::get('http://www.rtve.es/api/noticias.json');
+        $posteos1 = $respuesta->json();        
+        $posteos2 = $posteos1['page'];
+        
+        $posteos = $posteos2['items'];        
+                           
+        for ($i=0; $i < count($posteos); $i++) { 
+            if ($posteos[$i]['id']==$id) {
+                $posteo=$posteos[$i];
+            }
+            
+        }            
+
+      return view('noticia', ['posteo'=>$posteo]);
     }
       
     /**
