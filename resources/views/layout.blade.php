@@ -51,25 +51,24 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('contacto') }}">Contacto</a>
           </li>
-          </ul>
-      </div>
+       
 <!-- Authentication Links -->
-       <nav class="navbar navbar-expand navbar-light shadow-sm" style="padding: .2rem .2rem;">
+       {{-- <nav class="navbar navbar-expand navbar-light shadow-sm" style="padding: .2rem .2rem;"> --}}
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {{-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> --}}
                     <!-- Left Side Of Navbar -->
                    {{-- // --}}
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto flex-column text-center">
+                    {{-- <ul class="navbar-nav ml-auto flex-column text-center"> --}}
                         <!-- Authentication Links -->
                         @guest
                         
                             <li class="nav-item">
-                                <a class="nav-link"  href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link btn btn-primary¸"  href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link btn btn-success" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -94,6 +93,8 @@
                             </li>
                         @endguest
                     </ul>
+                       {{-- </ul> --}}
+      {{-- </div> --}}
                 </div>
             </div>
         </nav>
