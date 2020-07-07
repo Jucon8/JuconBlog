@@ -237,7 +237,7 @@
           <div class="col-lg-6">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h2 class="card-title">Bienvenidx!</h2>
 
                 <p class="card-text">
                   @yield('contenido')
@@ -313,7 +313,7 @@
       Programado en Laravel 7.X
     </div>
     <!-- Default to the left -->
-    <strong>Copyright Juan José Condinanzi&copy; 2020 - <a href="https://JuconBlog.xyz">JuconBlog</a>.</strong> Todos los derechos reservados.
+    <strong>Copyright Juan José Condinanzi &copy; 2020 - <a href="https://JuconBlog.xyz">JuconBlog</a>.</strong> Todos los derechos reservados.
   </footer>
 </div>
 <!-- ./wrapper -->
