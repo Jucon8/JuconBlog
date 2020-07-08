@@ -49,15 +49,19 @@ class NoticiasController extends Controller
 
                 // API
         $respuesta= Http::get('http://www.rtve.es/api/noticias.json');
-        $posteos1 = $respuesta->json();
+        $posteos1 = $respuesta->json();        
         $posteos2 = $posteos1['page'];
-        $posteos = $posteos2['items'];
-        foreach ($posteos as $posts);
-        dd($posteos);
-        //  dd($posts['id']);
+        
+        $posteos = $posteos2['items'];        
+                           
+        for ($i=0; $i < count($posteos); $i++) { 
+            if ($posteos[$i]['id']==$id) {
+                $post=$posteos[$i];
+            }
+            
+        }            
 
-        // $posteo = Posteo::where('id', $id)->first();
-      return view('noticia', compact('posteo'));
+      return view('noticia', ['post'=>$post]);
     }
       
     /**

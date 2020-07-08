@@ -1,24 +1,27 @@
 
-
 @extends('layout')
 @section('titulo')
-Noticia:{{$posteo->id}}
+Noticia:
 @endsection
 
 @section('contenido')
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('{{url('img/corona.jpeg')}}')">
-    <div class="overlay"></div>
+    
+  <header class="masthead" style="background-image: url('{{$post['image']}}')">
+    <div class="overlay">
+      
+    </div>
+    
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-              {{-- {{dd($posteo)}} --}}
-          <h1>{{$posteo->titulo}}</h1>
-            <h2 class="subheading">{{$posteo->comentario}}</h2>
-            <span class="meta">Publicado por:
-            <a href="#">{{$posteo->usuario}}</a>
-            {{$posteo->added_on->diffForHumans()}}</span>
+              {{-- @dd($post) --}}
+          <h1>{{$post['title']}}</h1>
+            <h2 class="subheading">{{$post['mainCategory']}}</h2>
+            <span class="meta">Publicado el:
+            <a href="#">{{$post['anteTitle']}}</a>
+            {{$post['publicationDate']}}</span>
           </div>
         </div>
       </div>
@@ -31,7 +34,7 @@ Noticia:{{$posteo->id}}
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <p class="text-justify">
-          {{$posteo->cuerpo}}
+          {!!$post['text']!!}
             </p>
         </div>
       </div>
@@ -39,7 +42,7 @@ Noticia:{{$posteo->id}}
   </article>
   <hr>
   <a href="{{url('/')}}">
-  <div class="masthead" style="background-image: url('{{url('img/corona.jpeg')}}')">
+  <div class="masthead" style="background-image: url('{{$post['image']}}')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
