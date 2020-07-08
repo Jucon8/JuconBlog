@@ -23,7 +23,7 @@
   
   <!-- Main Content -->
   {{-- MODO API RTVE NOTICIAS--}}
-
+<hr>
 @foreach ($posteos as $post)
 <div class="card mb-3">
   <div class="row no-gutters">
@@ -37,12 +37,12 @@
             <h2 class="post-title">
               {{$post['longTitle']}}
             </h2>
-            {{-- <h3 class="post-subtitle">
-                {{$post['summary']}}
-            </h3> --}}
+            <h4 class="post-subtitle">
+                {{-- {!!$post['summary']!!} --}}
+            </h4>
           </a>
           <p class="post-meta"> Etiquetas:
-            <a href="#">{{$post['anteTitle']}}</a>
+            <a href="#">{{$post['mainCategory']}}</a>
             <br>
             Fecha:
           {{$post['publicationDate']}}</p>
