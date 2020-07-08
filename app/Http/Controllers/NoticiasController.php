@@ -56,12 +56,12 @@ class NoticiasController extends Controller
                            
         for ($i=0; $i < count($posteos); $i++) { 
             if ($posteos[$i]['id']==$id) {
-                $posteo=$posteos[$i];
+                $post=$posteos[$i];
             }
             
         }            
 
-      return view('noticia', ['posteo'=>$posteo]);
+      return view('noticia', ['post'=>$post]);
     }
       
     /**
