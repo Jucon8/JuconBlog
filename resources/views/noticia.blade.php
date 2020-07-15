@@ -41,7 +41,12 @@ Noticia:
     </div>
   </article>
   <hr>
-  <a href="{{url('/')}}">
+  <div class="clearfix">
+          <a class="btn btn-primary float-LEFT" href="{{url('/')}}">VOLVER AL INICIO</a>
+  </div>
+
+  {{-- VOLVER AL INICIO ANTERIOR CON IMAGEN --}}
+  {{-- <a href="{{url('/')}}">
   <div class="masthead" style="background-image: url('{{$post['image']}}')">
     <div class="overlay"></div>
     <div class="container">
@@ -49,13 +54,14 @@ Noticia:
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
               {{-- {{dd($posteo)}} --}}
-            <h2 class="subheading"><i class="fas fa-arrow-circle-left"></i> VOLVER AL INICIO</h2>
+              
+            {{-- <h2 class="subheading"><i class="fas fa-arrow-circle-left"></i> VOLVER AL INICIO</h2>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </a>
+  </a> --}}
 
   <hr>
   @endsection

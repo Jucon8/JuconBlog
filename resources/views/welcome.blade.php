@@ -13,8 +13,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Noticias</h1>
-            <span class="subheading">No es otro simple blog. Oh si?</span>
+            <h1>NOTICIAS</h1>
+            <span class="subheading">AL ALCANCE DE UN CLICK</span>
           </div>
         </div>
       </div>
@@ -25,14 +25,16 @@
   {{-- MODO API RTVE NOTICIAS--}}
 <hr>
 @foreach ($posteos as $post)
+
 <div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-md-4" style="overflow: hidden">
+      <a href=" {{ route('noticia.show', $post['id']) }} ">
           <img class="post-image" src="{{$post['imageSEO']}}" alt="">
       </div>
           <div class="col-md-8 pl-1" id="textoNoticia">
             <div class="post-preview">
-        <a href=" {{ route('noticia.show', $post['id']) }} ">
+        
         
             <h2 class="post-title">
               {{$post['longTitle']}}
